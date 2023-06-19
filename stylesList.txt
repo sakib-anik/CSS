@@ -1,0 +1,141 @@
+font-weight:bold
+
+font-family:Arial;
+font-family:Tahoma;
+
+font-size:25px;
+font-size:2em;
+font-size:150%;
+
+font-style:italic;
+font-variant:small-caps;
+
+color:red
+color:rgb(255,105,27);
+color:#45f655
+color:hsl(245,100%,30%)
+
+text-decoration:none
+text-decoration:underline
+text-decoration:overline
+text-decoration:line-through
+
+text-transform:uppercase
+text-transform:lowercase
+
+line-height:5px;
+line-height:5em;
+line-height:150%;
+
+font:style variant weight size/height family;
+font: italic small-caps bold 25px/150% Arial;
+
+background-image: url("img/839075.jpg");
+background-repeat: no-repeat
+background-repeat: repeat-x
+background-repeat: repeat-y
+background-size: 250px 150px
+		 x-axis y-axis 
+background-size: cover
+
+background:url(img/839075.jpg) no-repeat;
+background-attachment:fixed;
+background-attachment:scroll;
+
+width: 650px;
+height: 650px;
+
+text-align: center;
+text-align: left;
+text-align: justify;
+
+For taking the table into top center:
+margin:0 auto;
+margin:1.5em; //1.5*font-size
+
+background-color:red;
+background-color:#ddd;
+background:#ddd
+
+border-collapse:collapse;
+border: 2px solid red;
+	width property
+border-right:2px solid #ddd;
+border-left:2px solid #ddd;
+border-bottom:2px solid orange;
+
+margin:50px;
+margin-top:20px;
+margin-left:20px;
+margin-right:20px;
+margin-bottom:20px;
+
+padding:20px;
+padding-top:20px;
+padding-left:20px;
+padding-right:20px;
+padding-bottom:20px;
+padding:25px 5px;
+	y-ax x-ax
+padding:5px 10px 15px 20px;
+	top right bottom left ==> like a watch
+
+overflow:hidden;
+overflow:scroll;
+
+display:none;
+display:block;
+display:inline-block
+==> for converting inline element into block element
+diplay:inline;
+display:flex;
+flex-wrap:wrap;
+flex-wrap:nowrap;		// default value
+justify-content:center;
+align-items:center;
+
+
+float ==> defining width is necessary
+float:left;
+float:right;
+
+border-radius:5px;
+border-radius:5px 10px 15px 20px;
+
+min-height:40px;
+
+#img{
+	vertical-align:baseline; //default 3px under image
+	vertical-align:middle; //fix this
+}
+
+z-index:5;
+position:relative;
+
+text-shadow: 2px 2px 2px blue, 3px 4px 1px yellow;
+	  		   x  y  blur color
+box-shadow:  2px 3px 4px 5px blue inset;
+			 			 spread
+inset: for inner shadow
+
+h2::before{
+    content: "abdul";
+}
+
+this ==> abdulthis
+
+h2::after{
+    content: "abdul";
+}
+
+this ==> thisabdul
+
+transition:all 0.3s linear;
+transition: transform 0.6s;
+
+opacity:0.7;
+
+transform: translate(-50%,-50%) scale(0);
+transform: translate(-50%,-50%) scale(1);
+scale(2,2);
+	  x,y

@@ -1,0 +1,321 @@
+CSS ==> Cascading Style Sheets
+CSS3
+You can define and declare CSS in 3 ways.
+i. Inline CSS
+==>
+<p style="font-weight:bold;color:red;">Text</p>
+ii. Internal CSS
+==>
+<style>
+	p{
+		font-weight:bold;
+		color:red;
+	}
+</style>
+iii. External CSS
+<link rel="stylesheet" href="style.css"/>
+==> style.css
+p{
+	font-weight:bold;
+	color:red;
+}
+
+class="a1"	==> .a1
+id="a1"		==> #a1
+
+class="a1 b2"
+
+Comment:
+/* This is comment */
+
+table, th, td{
+	border-collapse:collapse;
+	border:2px solid red;
+}
+
+caption under table
+table caption{
+	background-color:#ddd;
+}
+
+Margin ==> Distance between 2 elements
+Padding ==> Creating distance between same element
+
+Every p element selected child or grand child
+#wrapper p{
+	color:red;
+}
+
+Every p element selected child
+#wrapper > p{
+	color:red;
+}
+
+CSS Properties:
+1.Display Property
+2.Overflow Property
+
+.block1:hover{
+	background-color:blue;
+}
+
+p{
+	color:red;
+}
+p:hover{
+	color:brown;
+}
+
+transition ==> hover is necessary
+.block1{
+	width:200px;
+	height:200px;
+	background-color:red;
+	float:left;
+	transition:background-color 4s;
+}
+.block1:hover{
+	background-color:blue;
+}
+
+.block1{
+	width:200px;
+	height:200px;
+	background-color:red;
+	float:left;
+	transition:background-color 4s, width 5s, height 2s;
+}
+.block1:hover{
+	background-color:blue;
+	width:300px;
+	height:500px;
+}
+
+.block1{
+	transition:all 2s ease;
+}
+.block1:hover{
+	background-color:blue;
+	width:300px;
+	height:500px;
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	transform:rotate(360deg);
+	transform:skewX(360deg);
+	transform:skewY(360deg);
+}
+
+transform:scale(2,2);
+		x,y
+
+transition:background-color 4s, width 5s ease;
+transition:background-color 4s, width 5s ease-out;
+transition:background-color 4s, width 5s cubic-bezier(0,0,0.12,0.94);
+
+unordered list default type ==> disc
+
+ul{
+	list-style-type:disc;
+}
+
+ul{
+	list-style-type:circle;
+}
+
+ul{
+	list-style-type:square;
+}
+
+for no icons:
+
+ul{
+	list-style-type:none;
+}
+
+input{
+	width:50px;
+}
+
+input[type=text]{
+	width:50px;
+}
+
+input[type="submit"]{
+	width:50px;
+}
+
+button design with cursor pointer:
+
+.mybtn{
+	width:150px;
+	height:45px;
+	font-size:20px;
+	border-radius:15px;
+	padding:5px;
+	color:#000;
+	transition:all 1s ease;
+}
+
+.mybtn:hover{
+	background:#000;
+	color:#fff;
+	cursor:pointer;
+}
+
+
+p.clear{
+	clear:left;
+}
+
+p.clear{
+	clear:right;
+}
+
+p.clear{
+	clear:both;
+}
+
+Gradient: To fill different colors in the same div
+2 types
+1.linear-gradient(red, green); ==> straight type
+2.Radial-gradient(red, green); ==> circular type
+
+1.linear-gradient(red, green, blue, yellow);
+.mydiv{
+	width:800px;
+	height:150px;
+	background:linear-gradient(red, green, blue, yellow);
+}
+
+For bottom to top order coloring:
+
+.mydiv{
+	width:800px;
+	height:150px;
+	background:linear-gradient(to top, red, green, blue, yellow);
+}
+
+For default-top to bottom coloring order:
+
+.mydiv{
+	width:800px;
+	height:150px;
+	background:linear-gradient(to bottom, red, green, blue, yellow);
+}
+
+For right to left coloring order:
+
+.mydiv{
+	width:800px;
+	height:150px;
+	background:linear-gradient(to left, red, green, blue, yellow);
+}
+
+For left to right coloring order:
+
+.mydiv{
+	width:800px;
+	height:150px;
+	background:linear-gradient(to right, red, green, blue, yellow);
+}
+
+For browser compatibility:
+
+.mydiv{
+	width:800px;
+	height:150px;
+	background:-webkit-linear-gradient(right, red, green, blue, yellow);
+}
+
+2.Radial-gradient(red, green):
+
+.mydiv{
+	width:800px;
+	height:150px;
+	background:radial-gradient(red, green, blue, yellow);
+}
+
+.mydiv{
+	width:800px;
+	height:150px;
+	background:radial-gradient(red 10%, green 30%, blue 50%, yellow 10%);
+}
+
+Online Gradient Generator: ColorZilla.com
+
+Reset Everything:
+*{					// universal selector *
+	margin:0;
+	padding:0;
+}
+
+ul#menu{
+
+}
+
+ul#menu li{
+
+}
+
+#menu li{
+
+}
+
+#menu li:last-child{
+	border-right:none;
+}
+
+#menu li:first-child{
+	border-left:none;
+}
+
+#menu li{
+	float:left;
+	list-style-type:none;
+	border-right:1px solid #605B5B;
+	border-left:1px solid #2B2A2A;
+	transition:all 0.3s ease;
+	position:relative;
+}
+#menu li ul{
+	list-style-type:none;
+	padding:0;
+	position:absolute;
+	left:-99999px;
+}
+
+While using Google Fonts:
+Add this to CSS:
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&family=Ubuntu:ital,wght@1,300&display=swap');
+
+p{
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:bold;
+}
+
+svg
+eot
+woff
+ttf
+
+@font-face{
+	font-family:"WendyLPStd-Medium";
+	src:url("../font/WendyLPStd-Medium.eot") format("eot"), url	("../font/WendyLPStd-	Medium.woff") format("woff"), url	("../font/WendyLPStd-Medium.svg#WendyLPStd-	Medium") format("svg"), 	url("../font/WendyLPStd-Medium.ttf") format	("truetype");
+}
+
+p{
+	font-family:WendyLPStd-Medium;
+	font-size:50px;
+	color:red;
+}
+
+id value > class value
+
+overflow:hidden; ==> list style type gone
+
+More pseudo classes:
+active
+focus
+visited
